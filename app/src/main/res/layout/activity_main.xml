@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bfb5b2"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#bfb5b2"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#bfb5b2"
+            tools:context=".MainActivity"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="107dp">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:text="Brillantes's Calculator"
+                app:layout_constraintBottom_toTopOf="@+id/textView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Operand 1"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtOperand1"
+                app:layout_constraintEnd_toEndOf="@+id/textView8"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="@+id/textView8" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Operand 2"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtOperand2"
+                app:layout_constraintEnd_toEndOf="@+id/txtOperand1"
+                app:layout_constraintStart_toStartOf="@+id/txtOperand1" />
+
+            <Button
+                android:id="@+id/btnModulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:text="%"
+                app:layout_constraintBottom_toTopOf="@+id/textView5"
+                app:layout_constraintEnd_toEndOf="@+id/btnMultiplication"
+                app:layout_constraintHorizontal_bias="0.508"
+                app:layout_constraintStart_toStartOf="@+id/btnDivision" />
+
+            <Button
+                android:id="@+id/btnDivision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="/"
+                app:layout_constraintBottom_toTopOf="@+id/btnModulo"
+                app:layout_constraintStart_toStartOf="@+id/btnAddition" />
+
+            <Button
+                android:id="@+id/btnAddition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="+"
+                app:layout_constraintBottom_toTopOf="@+id/btnDivision"
+                app:layout_constraintStart_toStartOf="@+id/txtOperand2" />
+
+            <Button
+                android:id="@+id/btnSubtraction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                app:layout_constraintEnd_toEndOf="@+id/txtOperand2"
+                app:layout_constraintTop_toTopOf="@+id/btnAddition" />
+
+            <Button
+                android:id="@+id/btnMultiplication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="*"
+                app:layout_constraintBottom_toTopOf="@+id/btnModulo"
+                app:layout_constraintEnd_toEndOf="@+id/btnSubtraction" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="The Result is:"
+                app:layout_constraintBottom_toTopOf="@+id/txtAnswer"
+                app:layout_constraintEnd_toEndOf="@+id/btnModulo"
+                app:layout_constraintStart_toStartOf="@+id/btnModulo" />
+
+            <TextView
+                android:id="@+id/txtAnswer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="48dp"
+                android:text="ANSWER"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/textView5"
+                app:layout_constraintHorizontal_bias="0.518"
+                app:layout_constraintStart_toStartOf="@+id/textView5" />
+
+            <EditText
+                android:id="@+id/txtOperand1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="0"
+                app:layout_constraintBottom_toTopOf="@+id/textView4"
+                app:layout_constraintEnd_toEndOf="@+id/textView2"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+            <EditText
+                android:id="@+id/txtOperand2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="0"
+                app:layout_constraintBottom_toTopOf="@+id/btnAddition"
+                app:layout_constraintEnd_toEndOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="@+id/textView4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
